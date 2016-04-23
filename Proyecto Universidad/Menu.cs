@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyCalculatorv1;
 
 namespace Proyecto_Universidad
 {
@@ -21,10 +22,8 @@ namespace Proyecto_Universidad
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
-            childForm.Show();
+            MyCalculatorv1.MainWindow cal = new MyCalculatorv1.MainWindow();
+            cal.Show();                  
         }
 
         private void OpenFile(object sender, EventArgs e)
